@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/LeviCROQ/EcMachinaClass/issues"
   },
-  "homepage": "https://github.com/LeviCROQ/EcMachinaClass#readme"
+  "homepage": "https://github.com/LeviCROQ/EcMachinaClass#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
 }
