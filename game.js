@@ -1,8 +1,9 @@
 // A classic game of rock, paper, scissors
-var prompt = require('prompt-sync')
+var prompt = require('prompt-sync')()
 
 let choice = '';
 let roll = '';
+let userInput = '';
 
 class Game {
 
@@ -26,19 +27,19 @@ class Game {
 
 
 userMove() {
-    userInput = prompt('Rock, paper, scissors?');
+    let input = prompt('Rock, paper, scissors?');
 
-    if (userInput == 'ROCK') {
-        userInput = 0
-        return userInput
+    if (input == 'ROCK') {
+        this.userInput = 0
+        return this.userInput
     }
-    else if (userInput == 'PAPER') {
-        userInput = 1
-        return userInput
-    } else if (userInput == 'SCISSORS')
+    else if (input == 'PAPER') {
+        this.userInput = 1
+        return this.userInput
+    } else if (input == 'SCISSORS')
     {
-        userInput = 2
-        return userInput
+        this.userInput = 2
+        return this.userInput
     }
 }
 // Give the user a prompt, ask for their move - rock, paper or scissors. 
@@ -49,13 +50,13 @@ userMove() {
 
 checkScore(){
 
-    if (userInput == computerInput){
+    if (this.userInput == this.computerInput){
         console.log('DRAW!!!')
     }
-    else if (userInput == 0 && computerInput == 2) {
+    else if (this.userInput == 0 && this.computerInput == 2) {
         console.log('You win!')
     }
-    else if (userInput == 0 && computerInput == 1) {
+    else if (this.userInput == 0 && this.computerInput == 1) {
         console.log('You lose!')
 }
 }
